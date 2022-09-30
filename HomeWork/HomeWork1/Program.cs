@@ -98,3 +98,4 @@ while (n > 0)
     n--;
 }
 Console.Write(" - четные числа в заданном промежутке.");
+Console.ReadLine();
