@@ -65,7 +65,7 @@ else
 
 Console.Clear();
 
-Console.Write("Введите число - ");
+Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
 if (a % 2 == 0)
@@ -86,7 +86,7 @@ else
 /*
 Console.Clear();
 
-Console.Write("Введите число - ");
+Console.Write("Введите число: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 while (n > 0)
@@ -106,7 +106,7 @@ Console.ReadLine();
 
 Console.Clear();
 
-Console.Write("Введите число - ");
+Console.Write("Введите число: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 int current = 2;
