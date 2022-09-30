@@ -82,8 +82,8 @@ else
 // Задача №4. Напишите программу, которая на вход принимает число (N), а на выходе показывает 
 // все чётные числа от 1 до N.
 
-// Решение:
-
+// Решение (1 способ):
+/*
 Console.Clear();
 
 Console.Write("Введите число - ");
@@ -99,3 +99,23 @@ while (n > 0)
 }
 Console.Write(" - четные числа в заданном промежутке.");
 Console.ReadLine();
+*/
+
+/*
+// Решение (2 способ)
+
+Console.Clear();
+
+Console.Write("Введите число - ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int current = 2;
+
+while (current <= n)
+{
+    Console.Write(" " + current);
+    current = current + 2;
+}
+Console.Write(" - четные числа в заданном промежутке. ");
+Console.ReadLine();
+*/
