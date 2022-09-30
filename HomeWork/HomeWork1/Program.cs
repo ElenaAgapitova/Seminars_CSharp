@@ -46,10 +46,19 @@ int b = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число c = ");
 int c = Convert.ToInt32(Console.ReadLine());
 
-int max = a;
-
-if (b > max) max = b;
-if (c > max) max = c;
-
-Console.WriteLine("Максимальное число = " + max);
+if (a == b && a == c)
+{
+    Console.Write("Ваши числа равны. Введите другие числа.");
+}
+else
+{
+    int max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+    Console.WriteLine("Максимальное число = " + max);
+}
 */
+
+// Задача №3. Напишите программу, которая на вход принимает число и выдаёт, является ли число 
+// чётным (делится ли оно на два без остатка).
+
