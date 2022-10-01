@@ -89,7 +89,7 @@ Console.Clear();
 Console.Write("Введите число больше 1: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-while (n > 0)
+while (n > 1)
 {
     if (n % 2 == 0)
     {
@@ -101,21 +101,37 @@ Console.Write(" - четные числа в заданном промежутк
 Console.ReadLine();
 */
 
-/*
-// Решение (2 способ)
 
+// Решение (2 способ)
+/*
 Console.Clear();
 
 Console.Write("Введите число больше 1: ");
-int n = Convert.ToInt32(Console.ReadLine());
 
-int current = 2;
-
-while (current <= n)
+try
 {
-    Console.Write(" " + current);
-    current = current + 2;
+    int n = Convert.ToInt32(Console.ReadLine());
+    if (n<=1) 
+    {
+        Console.WriteLine ("Введите число, которое больше 1");
+        Console.ReadLine();
+    }
+    else
+    {
+        int current = 2;
+
+        while (current <= n)
+        {
+            Console.Write(" " + current);
+            current = current + 2;
+        }
+        Console.Write(" - четные числа в заданном промежутке. ");
+        Console.ReadLine();
+    }
+} 
+catch (Exception)
+{
+    Console.WriteLine("Некорректный ввод. Введите целое число");
+    Console.ReadLine();
 }
-Console.Write(" - четные числа в заданном промежутке. ");
-Console.ReadLine();
 */
