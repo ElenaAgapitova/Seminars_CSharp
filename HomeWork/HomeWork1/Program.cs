@@ -120,7 +120,7 @@ catch
 
 
 // Решение (2 способ)
-/*
+
 Console.Clear();
 
 Console.Write("Введите число больше 1: ");
@@ -148,7 +148,6 @@ try
 } 
 catch (Exception)
 {
-    Console.WriteLine("Некорректный ввод. Введите целое число");
+    Console.WriteLine("Некорректный ввод. Введите целое число больше 1");
     Console.ReadLine();
 }
-*/
