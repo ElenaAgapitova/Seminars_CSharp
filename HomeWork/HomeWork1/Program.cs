@@ -87,18 +87,35 @@ else
 Console.Clear();
 
 Console.Write("Введите число больше 1: ");
-int n = Convert.ToInt32(Console.ReadLine());
 
-while (n > 1)
+try
 {
-    if (n % 2 == 0)
+    int n = Convert.ToInt32(Console.ReadLine());
+
+    if (n<=1)
     {
-        Console.Write(" " + n);
+        Console.WriteLine("Введите число больше 1");
+        Console.ReadLine();
     }
-    n--;
+    else
+    {
+        while (n > 1)
+        {
+            if (n % 2 == 0)
+            {
+                Console.Write(" " + n);
+            }
+            n--;
+        }
+        Console.Write(" - четные числа в заданном промежутке.");
+        Console.ReadLine();
+    }
 }
-Console.Write(" - четные числа в заданном промежутке.");
-Console.ReadLine();
+catch
+{
+    Console.WriteLine("Некорректный ввод. Введите целое число больше 1");
+    Console.ReadLine();
+}
 */
 
 
