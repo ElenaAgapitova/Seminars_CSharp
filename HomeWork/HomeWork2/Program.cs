@@ -10,7 +10,7 @@ int FindSecondDigit(int num)
     return result;
 }
 
-Console.WriteLine("Введите числоло от 100 до 999: ");
+Console.WriteLine("Введите число от 100 до 999: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int answer = FindSecondDigit(num);
 Console.WriteLine($"Вторая цифра числа {num} -> {answer}.");
@@ -82,3 +82,24 @@ else
 }
 Console.ReadLine();
 */
+
+// Задача №3. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и 
+// проверяет, является ли этот день выходным.
+
+Console.Clear();
+
+string FindWeekend(int day)
+{
+    string result;
+    if (day<=5)
+        result = "Это рабочий день";
+    else
+        result = "Это выходной день.";
+    return result;
+}
+
+Console.WriteLine("Введите цифру, обозначающая день недели, где понедельник - это 1, воскресенье -7: ");
+int day = Convert.ToInt32(Console.ReadLine());
+string answer = FindWeekend(day);
+Console.WriteLine(answer);   
+Console.ReadLine();
