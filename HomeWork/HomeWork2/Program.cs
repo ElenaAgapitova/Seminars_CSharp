@@ -30,18 +30,18 @@ int ThirdDigit(int num)
 
     if (num >= 100 & num <= 999)
         res = num % 10;
-    else 
+    else
         if (num >= 1000 & num <= 9999)
-            res = (num / 10) % 10;
-    else 
+        res = num / 10 % 10;
+    else
         if (num >= 10000 & num <= 99999)
-            res = (num / 100) % 10;
+        res = num / 100 % 10;
     return res;
 }
 
-int num = new Random().Next(1,100000);
+int num = new Random().Next(1, 100000);
 
-if (num>=1 & num<=99)
+if (num >= 1 & num <= 99)
     Console.WriteLine("Третьей цифры нет");
 else
 {
@@ -63,10 +63,10 @@ int ThirdDigit(int num)
         res = num % 10;
     else 
         if (num >= 1000 & num <= 9999)
-            res = (num / 10) % 10;
+            res = num / 10 % 10;
     else 
         if (num >= 10000 & num <= 99999)
-            res = (num / 100) % 10;
+            res = num / 100 % 10;
     return res;
 }
 
