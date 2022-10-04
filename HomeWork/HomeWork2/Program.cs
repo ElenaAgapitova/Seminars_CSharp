@@ -5,17 +5,15 @@ Console.Clear();
 
 int FindSecondDigit(int num)
 {
-    int action1;
-    int action2;
-    action1 = num / 10;
-    action2 = action1 % 10;
-    return action2;
+    int result;
+    result = num / 10 % 10;
+    return result;
 }
 
 Console.WriteLine("Введите числоло от 100 до 999: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int res = FindSecondDigit(num);
-Console.WriteLine($"Вторая цифра числа {num} -> {res}.");
+int answer = FindSecondDigit(num);
+Console.WriteLine($"Вторая цифра числа {num} -> {answer}.");
 Console.ReadLine();
 */
 
