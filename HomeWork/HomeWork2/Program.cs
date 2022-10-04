@@ -82,10 +82,33 @@ else
 }
 Console.ReadLine();
 */
+// Решение 3:
+
+Console.Clear();
+
+int ThirdDigit(int num)
+{
+    int res;
+    while (num > 999)
+        num = num / 10;
+    res = num % 10;
+    return res;
+}
+
+int num = new Random().Next(1, 100000);
+
+if (num >= 1 & num <= 99)
+    Console.WriteLine("Третьей цифры нет");
+else
+{
+    int answer = ThirdDigit(num);
+    Console.WriteLine($"Полученное число = {num}, третья цифра в данном числе = {answer}");
+}
+Console.ReadLine();
 
 // Задача №3. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и 
 // проверяет, является ли этот день выходным.
-
+/*
 Console.Clear();
 
 string FindWeekend(int day)
@@ -103,3 +126,4 @@ int day = Convert.ToInt32(Console.ReadLine());
 string answer = FindWeekend(day);
 Console.WriteLine(answer);   
 Console.ReadLine();
+*/
