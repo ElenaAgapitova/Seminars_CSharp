@@ -52,3 +52,34 @@ int num = Convert.ToInt32(Console.ReadLine());
 Palindrome(num);
 Console.ReadLine();
 
+
+
+
+
+// Задача №3. Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов 
+// чисел от 1 до N.
+
+/*
+Console.Clear();
+
+void FindCubesofNumbers(int N)
+{
+    int count = 1;
+    if(N<1)
+        Console.WriteLine("Введите число больше 1");
+    else
+    {
+        while(count<=N)
+        {
+            Console.Write($"{Math.Pow(count,3)} ");
+            count++;
+        }
+    }
+}
+Console.Write("Введите число: ");
+int N = Convert.ToInt32(Console.ReadLine());
+Console.Write($"Кубы чисел от 1 до {N}: ");
+Console.ForegroundColor = ConsoleColor.Green;
+FindCubesofNumbers(N);
+Console.ReadLine(); 
+*/
