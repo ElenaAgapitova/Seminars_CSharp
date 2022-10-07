@@ -1,10 +1,10 @@
 ﻿// Задача №1. 
-
+/*
 Console.Clear();
 
 string Palindrome(int num)
 {
-    string res = "0";
+    string res;
     string numString = Convert.ToString(num);
     
     if (numString.Length == 5)
@@ -24,10 +24,12 @@ string Palindrome(int num)
     return res;
 }
 
-Console.WriteLine("Введите пятизначное число: ");
+Console.Write("Введите пятизначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 string result = Palindrome(num);
+Console.ForegroundColor = ConsoleColor.Green; 
 Console.WriteLine(result);
 Console.ReadLine();
+*/
 
 
