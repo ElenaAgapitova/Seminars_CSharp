@@ -28,7 +28,6 @@ string Palindrome(int num)
 Console.Write("Введите пятизначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 string result = Palindrome(num);
-Console.ForegroundColor = ConsoleColor.Green; 
 Console.WriteLine(result);
 Console.ReadLine();
 */
@@ -108,7 +107,6 @@ void FindCubesofNumbers(int N)
 Console.Write("Введите число: ");
 int N = Convert.ToInt32(Console.ReadLine());
 Console.Write($"Кубы чисел от 1 до {N}: ");
-Console.ForegroundColor = ConsoleColor.Green;
 FindCubesofNumbers(N);
 Console.ReadLine(); 
 */
