@@ -31,10 +31,11 @@ string result = Palindrome(num);
 Console.WriteLine(result);
 Console.ReadLine();
 */
-/*
-// Решение 2:
-Console.Clear();
 
+// Решение 2:
+
+/*
+Console.Clear();
 void Palindrome(int num)
 {
     int symbol_1 = num / 10000;
@@ -51,7 +52,7 @@ Console.Write("Введите пятизначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 Palindrome(num);
 Console.ReadLine();
-*/
+
 /*
 // Задача №2. Напишите программу, которая принимает на вход координаты двух точек и находит 
 // расстояние между ними в 3D пространстве.
@@ -110,3 +111,29 @@ Console.Write($"Кубы чисел от 1 до {N}: ");
 FindCubesofNumbers(N);
 Console.ReadLine(); 
 */
+
+/*
+if (result_1 != result_2)
+{
+    Console.WriteLine($"Число {number} - не палиндорм.");
+}
+else 
+    while(i-2<=end-1)
+    {
+        double del1= Math.Pow(10, a-1);
+        int result_3 = (int) (number / del % 10);
+        int result_4 = number / b % 10;
+        if(result_3==result_4)
+        {
+            a--;
+            b*=10;
+            i--;
+           count++;
+           Console.WriteLine(count);
+        }
+        
+    }
+    */
+
+
+
