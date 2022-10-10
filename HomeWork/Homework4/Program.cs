@@ -24,16 +24,10 @@ Console.Clear();
 int SumDigits(int num)
 {
     int sum = 0;
-    int number = num.ToString();
-    int[] array = new int[number.Length];
-    int size = number.Length;
-    for(int i = 0; i < size; i++)
+    while (num > 0)
     {
-        array[i] = int.Parse(number[i]);
-        for(int j = 0; j < size; j++)
-        {
-            sum = sum + array[j];
-        }
+        sum = sum + num % 10;
+        num /= 10;
     }
     return sum;
 }
