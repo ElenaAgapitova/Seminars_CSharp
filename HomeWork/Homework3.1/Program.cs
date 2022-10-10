@@ -79,24 +79,30 @@ void Palindrome(int num)
     int count = 1;
     int size = num.ToString().Length;
     int del = (int)(Math.Pow(10, size - 1));
-    while (count <= size / 2)
+    int number = num;
+    while (count <= (size / 2))
     {
         if (num % 10 == num / del)
         {
             num = num % 10 / del;
             count++;
-        }
             if (num <= 9)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Число {num} - палиндром.");
+                Console.WriteLine($"Число {number} - палиндром.");
             }
-        else 
+        }
+        else
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Число {num} НЕ является палиндром.");
         }
         break;
+    }
+    if(number>0 && number<=9)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"Число {number} - палиндром.");
     }
 }
 
