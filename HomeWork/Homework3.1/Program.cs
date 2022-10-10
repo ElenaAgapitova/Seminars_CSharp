@@ -2,7 +2,7 @@
 // ли оно палиндромом.
 
 // Решение 3.
-
+/*
 Console.Clear();
 
 void Palindrome(int num)
@@ -35,7 +35,7 @@ Palindrome(num);
 Console.ReadLine();
 
 // Решение 4:
-/*
+
 Console.Clear();
 
 void Palindrome(int number)
@@ -69,3 +69,38 @@ void Palindrome(int number)
 
     Console.ReadLine();
 */
+
+// Решение 5:
+
+Console.Clear();
+
+void Palindrome(int num)
+{
+    int count = 1;
+    int size = num.ToString().Length;
+    int del = (int)(Math.Pow(10, size - 1));
+    while (count <= size / 2)
+    {
+        if (num % 10 == num / del)
+        {
+            num = num % 10 / del;
+            count++;
+        }
+            if (num <= 9)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"Число {num} - палиндром.");
+            }
+        else 
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"Число {num} НЕ является палиндром.");
+        }
+        break;
+    }
+}
+
+Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+Palindrome(num);
+Console.ReadLine();
