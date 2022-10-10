@@ -5,45 +5,67 @@
 
 Console.Clear();
 
-int ReverseNumber(int num)
+void Palindrome(int num)
 {
+    int number = num;
     int result = 0;
-    if(num<0)
-    {
-        num = num*(-1);
-        while (num > 0)
+    if (number > 0)
+        while (number > 0)
         {
             result *= 10;
-            result = result + num % 10;
-            num /= 10;
+            result = result + number % 10;
+            number /= 10;
         }
-        result = result *(-1);
-    }
-    if(num>0)
+    if (num == result)
     {
-        while (num > 0)
-        {
-            result *= 10;
-            result = result + num % 10;
-            num /= 10;
-        }
-
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"Число {num} - палиндром.");
     }
-    return result;
+    else if(number < 0 || number != result)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"Число {num} НЕ является палиндромом.");
+    }
 }
 
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int reverseNum = ReverseNumber(num);
+Palindrome(num);
 
-if (num == reverseNum)
-{
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine($"Число {num} - палиндром.");
-}
-else
-{
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine($"Число {num} НЕ является палиндромом.");
-}
 Console.ReadLine();
+
+// Решение 4:
+/*
+Console.Clear();
+
+void Palindrome(int number)
+{
+    string num = Convert.ToString(number);
+    int size = num.Length;
+    bool palindrome = true;
+
+    for (int i = 0; i < size / 2; i++)
+    {
+        if (num[i] == num[size - i - 1])
+            palindrome = true;
+        else
+            palindrome = false;
+    }
+    if (palindrome == true)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"Число {num} - палиндром.");
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"Число {num} НЕ является палиндромом.");
+    }
+}
+
+    Console.Write("Введите число: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    Palindrome(num);
+
+    Console.ReadLine();
+*/
