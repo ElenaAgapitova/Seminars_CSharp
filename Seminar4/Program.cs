@@ -27,6 +27,7 @@ int result = NumberDigits(a);
 Console.WriteLine(result);
 Console.ReadLine();
 */
+/*
 Console.Clear();
 int NumberDigits(int num)
 {
@@ -45,7 +46,7 @@ Console.WriteLine(result);
 Console.ReadLine();
 
 // Задача №3:Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
-/*
+
 Console.Clear();
 int Factorial(int a)
 {
@@ -60,3 +61,29 @@ int result = Factorial(a);
 Console.WriteLine(result);
 Console.ReadLine();
 */
+// Задача №4. Напишите программу, которая выводит массив из m элементов, заполненный нулями и 
+// единицами в случайном порядке.
+
+Console.Clear();
+
+int[] CreateRandomArray(int size, int minValue, int maxValue)
+{
+    int[] newArray = new int[size];
+    for(int i=0; i < size; i++)
+        newArray[i] = new Random().Next(minValue,maxValue+1);
+    return newArray;
+}
+
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+        Console.Write(" " + array[i]);
+    
+    Console.WriteLine();
+}
+Console.Write("Введите количество элементов: ");
+int size = Convert.ToInt32(Console.ReadLine());
+int min =0;
+int max =1;
+int[] myArray = CreateRandomArray(size, min, max);
+ShowArray(myArray);

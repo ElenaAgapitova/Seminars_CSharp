@@ -101,9 +101,13 @@ Console.WriteLine(result);
 Console.ReadLine();
 */
 // Задача №3. Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
-/*
-Console.Clear();
 
+// Решение 1:
+
+
+/*
+// Решение 2:
+Console.Clear();
 void FillArray(int[] array)
 {
     int size = array.Length;
