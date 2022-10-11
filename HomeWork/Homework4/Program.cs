@@ -1,14 +1,13 @@
 ﻿// Задача №1. Напишите цикл, который принимает на вход два числа (A и B) и возводит число A 
 // в натуральную степень B.
 // Решение 1 (цикл):
-/*
+
 Console.Clear();
 
 int DegreeAB(int a, int b)
 {
     int result = a;
-    int size = b-1;
-    for(int count = 1; count <= size; count++)
+    for(int count = 1; count <= (b-1); count++)
         result *= a;
     return result;
 }
@@ -19,7 +18,7 @@ int b = Convert.ToInt32(Console.ReadLine());
 int degreeAB = DegreeAB(a,b);
 Console.WriteLine($"Число {a} в степени {b} = {degreeAB}");
 Console.ReadLine();
-*/
+
 // Решение 2 (просто тренировка):
 /*
 Console.Clear();
@@ -82,6 +81,7 @@ Console.ReadLine();
 // Задача №3. Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
 
 // Решение 1:
+/*
 Console.Clear();
 
 int[] CreateArray(int size)
@@ -118,3 +118,4 @@ int[] YourArray = CreateArray(size);
 Console.ForegroundColor = ConsoleColor.Green;
 PrintArray(YourArray);
 Console.ReadLine();
+*/
