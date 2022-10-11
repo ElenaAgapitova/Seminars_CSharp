@@ -22,7 +22,6 @@ int degreeAB = DegreeAB(a,b);
 Console.WriteLine($"Число {a} в степени {b} = {degreeAB}");
 Console.ReadLine();
 */
-
 // Решение 2 (просто тренировка):
 /*
 Console.Clear();
@@ -85,31 +84,39 @@ Console.ReadLine();
 // Задача №3. Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
 // Решение 1:
-
-
-/*
-// Решение 2 (просто тренировка):
 Console.Clear();
-void FillArray(int[] array)
-{
-    int size = array.Length;
-    for(int index = 0; index < size; index++)
-        array[index] = new Random().Next(1, 100);
-           
-}
 
-void PrintArray(int[] array)
+int[] CreateArray(int size)
 {
-    int size = array.Length;
-    for(int index = 0; index < size; index++)
+    while(size < 0)
     {
-        Console.Write(" " + array[index]);
+        Console.Write("Размер массива не может быть отрицательным числом! Введите положительное число: ");
+        size = Convert.ToInt32(Console.ReadLine());
     }
+    int[] array = new int[size];
+    if(size == 0) 
+        Console.WriteLine("Размер массива = 0, массив пустой.");
+    else
+    {
+        for(int i = 0; i < size; i++)
+        {
+            Console.Write("Введите элемент массива: ");
+            array[i] = Convert.ToInt32(Console.ReadLine());
+        }
+    }
+    return array; 
 }
 
-int[] array = new int[8];
-FillArray(array);
-Console.Write("Массив из 8 элементов:");
-PrintArray(array);
+void PrintArray(int [] newArray)
+{
+    for(int i = 0; i < newArray.Length; i++)
+        Console.Write(newArray + " ");
+    Console.WriteLine();
+}
+
+Console.Write("Введите размер массива: ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] YourArray = CreateArray(size);
+Console.ForegroundColor = ConsoleColor.Green;
+PrintArray(YourArray);
 Console.ReadLine();
-*/
