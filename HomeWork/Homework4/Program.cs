@@ -1,4 +1,6 @@
-﻿// Задача №1. Напишите цикл, который принимает на вход два числа (A и B) и возводит число A 
+﻿// Павел, для тренировки делала несколько вариантов решений:)
+
+// Задача №1. Напишите цикл, который принимает на вход два числа (A и B) и возводит число A 
 // в натуральную степень B.
 // Решение 1:
 /*
@@ -40,8 +42,23 @@ Console.WriteLine($"Число {a} в степени {b} = {degreeAB}");
 Console.ReadLine();
 */
 // Задача №2.  Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-/*
+
 // Решение 1:
+Console.Clear();
+int SumDigits(int a)
+{
+    int sum = 0;
+    for (int current = 1; current <= a; current++)
+        sum += current;
+    return sum;
+}
+Console.Write("Введите число а: ");
+int a = Convert.ToInt32(Console.ReadLine());
+int result = SumDigits(a);
+Console.WriteLine($"Сумма цифр в числе {a} = {result}");
+Console.ReadLine();
+/*
+// Решение 2:
 Console.Clear();
 int SumDigits(int num)
 {
@@ -59,7 +76,8 @@ int sumDigits = SumDigits(num);
 Console.WriteLine($"Сумма цифр в числе {num} = {sumDigits}");
 Console.ReadLine();
 */
-// Решение 2:
+// Решение 3:
+/*
 Console.Clear();
 int SumDigits(int number)
 {
@@ -81,7 +99,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 int result = SumDigits(number);
 Console.WriteLine(result);
 Console.ReadLine();
-
+*/
 // Задача №3. Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 /*
 Console.Clear();
