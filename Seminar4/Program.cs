@@ -8,7 +8,7 @@ int GetSum(int a)
         sum += current;
     return sum;
 }
-Console.Write("Введите число а: ");
+Console.Write("Введите положительное число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 int result = GetSum(a);
 Console.WriteLine(result);
