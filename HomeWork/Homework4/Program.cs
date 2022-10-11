@@ -2,7 +2,7 @@
 
 // Задача №1. Напишите цикл, который принимает на вход два числа (A и B) и возводит число A 
 // в натуральную степень B.
-// Решение 1:
+// Решение 1 (цикл):
 /*
 Console.Clear();
 
@@ -22,43 +22,25 @@ int degreeAB = DegreeAB(a,b);
 Console.WriteLine($"Число {a} в степени {b} = {degreeAB}");
 Console.ReadLine();
 */
+
+// Решение 2 (просто тренировка):
 /*
-// Решение 2:
 Console.Clear();
-int DegreeAB(int a, int b)
-{
-    int result;
-    result = (int) (Math.Pow(a,b));
-    return result;
-}
 Console.Write("Введите число а: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите число b: ");
 int b = Convert.ToInt32(Console.ReadLine());
 
-int degreeAB = DegreeAB(a,b);
-Console.WriteLine($"Число {a} в степени {b} = {degreeAB}");
+int result = (int) (Math.Pow(a,b));
+
+Console.WriteLine($"Число {a} в степени {b} = {result}");
 Console.ReadLine();
 */
-// Задача №2.  Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-// Решение 1:
-Console.Clear();
-int SumDigits(int a)
-{
-    int sum = 0;
-    for (int current = 1; current <= a; current++)
-        sum += current;
-    return sum;
-}
-Console.Write("Введите число а: ");
-int a = Convert.ToInt32(Console.ReadLine());
-int result = SumDigits(a);
-Console.WriteLine($"Сумма цифр в числе {a} = {result}");
-Console.ReadLine();
+// Задача №2.  Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 /*
-// Решение 2:
+// Решение 1:
 Console.Clear();
 int SumDigits(int num)
 {
@@ -76,7 +58,7 @@ int sumDigits = SumDigits(num);
 Console.WriteLine($"Сумма цифр в числе {num} = {sumDigits}");
 Console.ReadLine();
 */
-// Решение 3:
+// Решение 2:
 /*
 Console.Clear();
 int SumDigits(int number)
@@ -97,7 +79,7 @@ int SumDigits(int number)
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int result = SumDigits(number);
-Console.WriteLine(result);
+Console.WriteLine($"Сумма цифр в числе {number} = {result}");
 Console.ReadLine();
 */
 // Задача №3. Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
@@ -106,7 +88,7 @@ Console.ReadLine();
 
 
 /*
-// Решение 2:
+// Решение 2 (просто тренировка):
 Console.Clear();
 void FillArray(int[] array)
 {
