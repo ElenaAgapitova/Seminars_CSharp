@@ -108,7 +108,7 @@ int[] CreateArray(int size)
 void PrintArray(int [] newArray)
 {
     for(int i = 0; i < newArray.Length; i++)
-        Console.Write(newArray + " ");
+        Console.Write(newArray[i] + " ");
     Console.WriteLine();
 }
 
