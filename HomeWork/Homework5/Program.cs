@@ -3,26 +3,48 @@
 /*
 Console.Clear();
 
-int AmountEvenNumbers()
+int[] CreateArray(int size, int minValue, int maxValue)
 {
-    int size = new Random().Next(2,11);
     int[] array = new int[size];
-    Console.Write("Созданный массив: ");
-    int amount = 0;
-    for(int i = 0; i < size; i++)
+        for(int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(100,1000);
+        array[i] = new Random().Next(minValue, maxValue+1);
+    }
+    return array;
+}
+
+ void PrintArray(int[] array)
+ {
+    Console.Write("Created array: { ");
+    for(int i = 0; i < array.Length; i++)
+    {
         Console.Write(array[i] + " ");
+    }
+    Console.WriteLine("}.");
+ }
+
+int AmountEvenNumbers(int[] array)
+{
+    int amount = 0;
+    for(int i = 0; i < array.Length; i++)
+    {
         if(array[i] % 2 == 0) 
             amount++;
     }
     return amount;
-       
 }
 
-int result = AmountEvenNumbers();
-Console.WriteLine();
-Console.WriteLine($"Количество четных чисел в массиве = {result}");
+Console.Write("Input a number of elements: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input the minimum element: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input the maximum element: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+int[] yourArray = CreateArray(size, minValue,maxValue);
+PrintArray(yourArray);
+int result = AmountEvenNumbers(yourArray);
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine($"Amount of even numbers in your array = {result}.");
 Console.ReadLine();
 */
 // Задача №2. Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, 
@@ -30,27 +52,45 @@ Console.ReadLine();
 /*
 Console.Clear();
 
-int SumUnevenIndexNum(int size)
+int[] CreateArray(int size, int minValue, int maxValue)
 {
     int[] array = new int[size];
-    Console.Write("Созданный массив: ");
-    int sum = 0;
-    for(int i = 0; i < size; i++)
+        for(int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(-99,100);
-        Console.Write(array[i] + " ");
-        if(i % 2 != 0) 
-            sum = sum + array[i];
+        array[i] = new Random().Next(minValue, maxValue+1);
     }
-    return sum;
-       
+    return array;
 }
 
-Console.Write("Введите размер массива: ");
+ void PrintArray(int[] array)
+ {
+    Console.Write("Created array: { ");
+    for(int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine("}.");
+ }
+
+int SumUnevenIndexNums(int[] array)
+{
+    int sum = 0;
+    for(int i = 1; i < array.Length; i += 2)
+        sum = sum + array[i];
+    return sum;
+}
+
+Console.Write("Input a number of elements: ");
 int size = Convert.ToInt32(Console.ReadLine());
-int result = SumUnevenIndexNum(size);
-Console.WriteLine();
-Console.WriteLine($"Сумма элементов на нечетных позициях = {result}");
+Console.Write("Input the minimum element: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input the maximum element: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+int[] yourArray = CreateArray(size, minValue,maxValue);
+PrintArray(yourArray);
+int result = SumUnevenIndexNums(yourArray);
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine($"Sum of elements in odd positions = {result}.");
 Console.ReadLine();
 */
 // Задача №3. Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным 
@@ -58,20 +98,32 @@ Console.ReadLine();
 
 Console.Clear();
 
-double DifMaxMin(int size)
+int[] CreateArray(int size, int minValue, int maxValue)
 {
-    double[] array = new double[size];
-    Console.Write("Созданный массив: { ");
-    double dif = 0;
-    for(int i = 0; i < size; i++)
+    int[] array = new int[size];
+        for(int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(-100,101);
-        Console.Write($"{array[i]} ");
+        array[i] = new Random().Next(minValue, maxValue+1);
+    }
+    return array;
+}
+
+ void PrintArray(int[] array)
+ {
+    Console.Write("Created array: { ");
+    for(int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
     }
     Console.WriteLine("}.");
-    double max = array[0];
-    double min = array[0];
-    for(int i = 1; i < size; i++)
+ }
+
+int DifMaxMin(int[] array)
+{
+    int dif = 0;
+    int min = array[0];
+    int max = array[0];
+    for(int i = 1; i < array.Length; i++)
     {
         if(array[i] > max)
             max = array[i];
@@ -79,14 +131,21 @@ double DifMaxMin(int size)
             min = array[i];
         dif = max - min;
     }
-    Console.WriteLine($"Максимальный элемент массива = {max}. Минимальный элемент массива = {min}");   
+    Console.WriteLine($"The maximum element in your array = {max}.");
+    Console.WriteLine($"The minimum element in your array = {min}.");
     return dif;
 }
 
-Console.Write("Введите размер массива: ");
+Console.Write("Input a number of elements: ");
 int size = Convert.ToInt32(Console.ReadLine());
-double result = DifMaxMin(size);
-Console.WriteLine();
+Console.Write("Input the minimum element: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input the maximum element: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+int[] yourArray = CreateArray(size, minValue,maxValue);
+PrintArray(yourArray);
+int result = DifMaxMin(yourArray);
 Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine($"Ответ: разница между максимальным и минимальным элементами массива равна {result}.");
+Console.WriteLine($"Difference between maximum and minimum array elements = {result}.");
 Console.ReadLine();
+
