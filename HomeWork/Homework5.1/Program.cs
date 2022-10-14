@@ -38,7 +38,7 @@ int[] ProductElementsArray(int[] array)
             i++;
             size--;
         }
-        if(i == end) newarray[i] = array[end];
+        newarray[i] = array[end];
         return newarray;
     }
     else
