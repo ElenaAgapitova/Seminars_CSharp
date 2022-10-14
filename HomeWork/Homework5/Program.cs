@@ -98,17 +98,18 @@ Console.ReadLine();
 
 Console.Clear();
 
-int[] CreateArray(int size, int minValue, int maxValue)
+double[] CreateArray(int size)
 {
-    int[] array = new int[size];
+    double[] array = new double[size];
         for(int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(minValue, maxValue+1);
+        Console.Write("Input array element: ");
+        array[i] = Convert.ToDouble(Console.ReadLine());
     }
     return array;
 }
 
- void PrintArray(int[] array)
+ void PrintArray(double[] array)
  {
     Console.Write("Created array: { ");
     for(int i = 0; i < array.Length; i++)
@@ -118,11 +119,11 @@ int[] CreateArray(int size, int minValue, int maxValue)
     Console.WriteLine("}.");
  }
 
-int DifMaxMin(int[] array)
+double DifMaxMin(double[] array)
 {
-    int dif = 0;
-    int min = array[0];
-    int max = array[0];
+    double dif = 0;
+    double min = array[0];
+    double max = array[0];
     for(int i = 1; i < array.Length; i++)
     {
         if(array[i] > max)
@@ -138,13 +139,9 @@ int DifMaxMin(int[] array)
 
 Console.Write("Input a number of elements: ");
 int size = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input the minimum element: ");
-int minValue = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input the maximum element: ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-int[] yourArray = CreateArray(size, minValue,maxValue);
+double[] yourArray = CreateArray(size);
 PrintArray(yourArray);
-int result = DifMaxMin(yourArray);
+double result = DifMaxMin(yourArray);
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine($"Difference between maximum and minimum array elements = {result}.");
 Console.ReadLine();
