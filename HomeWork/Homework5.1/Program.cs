@@ -53,7 +53,6 @@ int[] ProductElementsArray(int[] array)
         }
         return newarray;
     }
-    return array;
 }
 
 Console.Write("Input a number of elements: ");
