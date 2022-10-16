@@ -21,7 +21,7 @@ void PrintArray(int[] array)
     }
     Console.WriteLine("}.");
 }
-
+/*
 int[] ProductElementsArray(int[] array)
 {
     int i = 0;
@@ -53,6 +53,17 @@ int[] ProductElementsArray(int[] array)
         }
         return newarray;
     }
+}
+*/
+
+int[] ProductElementsArray(int[] array)
+{
+    int length = array.Length / 2 + array.Length % 2;
+    int[] newArray = new int[length];
+    for(int i = 0; i < length; i++)
+        if(i != array.Length - i - 1) newArray[i] = array[i] * array[array.Length - i -1];
+        else newArray[i] = array[i];
+    return newArray;
 }
 
 Console.Write("Input a number of elements: ");
