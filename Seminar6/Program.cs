@@ -60,18 +60,24 @@ bool Triangle(int a, int b, int c)
         return true;
     else return false;
 }
-
+*/
+Console.Clear();
+bool Triangle(int a, int b, int c)
+{
+    return a < b + c && b < c + a && c < a + b;
+}
+    
 Console.Write("Введите число А = ");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число В = ");
 int b = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число C = ");
 int c = Convert.ToInt32(Console.ReadLine());
-
 bool result = Triangle(a,b,c);
-Console.WriteLine($"Существование треугольника со сторонами {a}, {b}, {c}  - {result}");
+if(result) Console.WriteLine("Треугольник существует");
+else Console.WriteLine("Треугольник не существует");
 Console.ReadLine();
-*/
+
 // Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного 
 // копирования.
 /*
@@ -114,7 +120,7 @@ int[] myArray = ReturnArray(yourArray);
 PrintArray(myArray);
 */
 // Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: a и b.
-
+/*
 int[] Fibonacci(int a, int b, int n)
 {
     int[] array = new int[n];
@@ -145,3 +151,4 @@ Console.Write("Введите число В = ");
 int b = Convert.ToInt32(Console.ReadLine());
 int[] result = Fibonacci(a,b,n);
 PrintArray(result);
+*/
