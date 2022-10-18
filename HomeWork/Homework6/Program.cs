@@ -1,7 +1,7 @@
 ﻿// Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
 Console.Clear();
-/*
+
 int AmountPositiveNums(int amountNum)
 {
     int count = 0; 
@@ -13,8 +13,8 @@ int AmountPositiveNums(int amountNum)
     }
     return count;
 }
-*/
-/*
+
+
 int AmountPositiveNums(int amountNum)
 {
     int amount = 0;
@@ -28,7 +28,7 @@ int AmountPositiveNums(int amountNum)
     } while (amount < amountNum);
     return count;
 }
-
+/*
 Console.Write("Введите желаемое количество чисел: ");
 int amountNum = Convert.ToInt32(Console.ReadLine());
 int result = AmountPositiveNums(amountNum);
@@ -47,16 +47,11 @@ double[] IntersectionLines(double b1, double k1, double b2, double k2)
     return array;
 }
 
-void PrintArray(double[] array)
+void PrintIntersection(double[] array)
 {
-    Console.Write("Точка пересечения = [ ");
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine("].");
+    Console.Write($"Точка пересечения = [{array[0]}; {array[1]}].");
 }
-
+/*
 Console.Write("Введите b1: ");
 double b1 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите k1: ");
@@ -71,7 +66,7 @@ if(k1 == k2) Console.WriteLine("Прямые параллельны, точки 
 else
 {
     double[] result = IntersectionLines(b1,k1,b2,k2);
-    PrintArray(result);
+    PrintIntersection(result);
 }
 Console.ReadLine();
-
+*/
