@@ -1,0 +1,27 @@
+int[] CreateArray()
+{
+    Console.Write("Input a number of elements: ");
+    int size = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Input the minimum element: ");
+    int minValue = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Input the maximum element: ");
+    int maxValue = Convert.ToInt32(Console.ReadLine());
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = new Random().Next(minValue, maxValue + 1);
+    }
+    return array;
+}
+void PrintArray(int[] array)
+{
+    Console.Write("Created array: { ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine("}.");
+}
+
+int[] yourArray = CreateArray();
+PrintArray(yourArray);
