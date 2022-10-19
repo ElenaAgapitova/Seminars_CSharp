@@ -1,5 +1,37 @@
-﻿// Задача №4. Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний 
+﻿Console.Clear();
+
+void Experement()
+{
+   
+    Console.WriteLine("Введите число для проверки. Для завершения программы введите q.");
+    int count = 0;
+    int amount = 0;
+    while(true)
+    {
+        Console.Write("Введите число: ");
+        string? userInput = Console.ReadLine();
+        string stop = "q";
+        if(userInput != stop)
+        {
+            int num = Convert.ToInt32(userInput);
+            if (num > 0) count++;
+        }
+        else 
+        {
+        Console.WriteLine("Ввод окончен.");
+        Console.WriteLine($"Количество положительных чисел = {count}. Всего введено {amount} чисел.");
+        break;
+        }
+        amount++;
+    }
+}
+
+Experement();
+Console.ReadLine();
+
+// Задача №4. Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний 
 // элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+/*
 Console.Clear();
 
 int[] CreateArray(int size, int minValue, int maxValue)
@@ -55,7 +87,7 @@ int[] ProductElementsArray(int[] array)
     }
 }
 */
-
+/*
 int[] ProductElementsArray(int[] array)
 {
     int length = array.Length / 2 + array.Length % 2;
@@ -78,3 +110,4 @@ Console.ForegroundColor = ConsoleColor.Green;
 int[] result = ProductElementsArray(yourArray);
 PrintArray(result);
 Console.ReadLine();
+*/
