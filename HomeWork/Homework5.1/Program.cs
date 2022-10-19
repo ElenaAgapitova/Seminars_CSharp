@@ -1,6 +1,6 @@
 ﻿Console.Clear();
 
-void Experement()
+void AmountPositiveNums()
 {
    
     Console.WriteLine("Введите число для проверки. Для завершения программы введите q.");
@@ -26,7 +26,7 @@ void Experement()
     }
 }
 
-Experement();
+AmountPositiveNums();
 Console.ReadLine();
 
 // Задача №4. Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний 
