@@ -16,7 +16,7 @@ double[,] CreateRandomDouble2Array()
     Random rand = new Random();
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < columns; j++)
-            array[i, j] = Math.Round((rand.Next(minValue, maxValue + 1) + rand.NextDouble()), 1);
+            array[i, j] = Math.Round((rand.Next(minValue, maxValue) + rand.NextDouble()), 1);
     return array;
 }
 
