@@ -1,7 +1,7 @@
 ﻿// Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
 Console.Clear();
-
+/*
 int AmountPositiveNums(int amountNum)
 {
     int count = 0; 
@@ -38,7 +38,7 @@ Console.ReadLine();
 
 // Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями 
 // y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
-
+/*
 double[] IntersectionLines(double b1, double k1, double b2, double k2)
 {
     double[] array = new double[2];
