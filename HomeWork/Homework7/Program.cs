@@ -65,7 +65,7 @@ void Print2Array(int[,] array)
         Console.WriteLine();
     }
 }
-
+/*
 void FindElement(int[,] array)
 {
     Console.Write("Input an index 'i' of element: ");
@@ -77,7 +77,7 @@ void FindElement(int[,] array)
     else
         Console.WriteLine("There is no element with such indexes.");
 }
-
+*/
 // int[,] myArray = CreateRandom2Array();
 // Print2Array(myArray);
 // FindElement(myArray);
