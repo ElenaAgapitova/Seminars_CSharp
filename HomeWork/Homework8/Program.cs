@@ -220,7 +220,7 @@ int[,,] Create3DArray(int[] array)
 
 void Print3DArray(int[,,] array)
 {
-    Console.WriteLine("Индексы элементов в трехмерном массиве: ");
+    Console.WriteLine("Индексы элементов в трехмерном массиве (i,j,k): ");
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
@@ -249,7 +249,7 @@ Print3DArray(array3D);
 
 int[,] FiilArraySpiral()
 {
-    Console.Write("Введите размер массива (количество строк = количество столбцов): ");
+    Console.Write("Введите количество строк (количество строк = количество столбцов): ");
     int size = Convert.ToInt32(Console.ReadLine());
     int[,] arraySpiral = new int[size, size];
     int valueElements = 0;
