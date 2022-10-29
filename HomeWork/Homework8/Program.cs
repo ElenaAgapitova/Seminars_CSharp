@@ -253,47 +253,40 @@ int[,] FiilArraySpiral()
     int size = Convert.ToInt32(Console.ReadLine());
     int[,] arraySpiral = new int[size, size];
     int valueElements = 0;
-    int current = 0;
     for (int passage = 0; passage < size / 2; passage++)
     {
-        for (int i = 0 + current, j = 0 + current; j < size - current; j++) // первая строка
+        for (int i = 0 + passage, j = 0 + passage; j < size - passage; j++) // первая строка
         {
             arraySpiral[i, j] = valueElements + 1;
             valueElements++;
         }
-        for (int i = 1 + current, j = size - current - 1; i < size - current; i++) // первый столбец
+        for (int i = 1 + passage, j = size - passage - 1; i < size - passage; i++) // первый столбец
         {
             arraySpiral[i, j] = valueElements + 1;
             valueElements++;
         }
-        for (int i = size - current - 1, j = size - current - 2; j >= 0 + current; j--) // третья строка
+        for (int i = size - passage - 1, j = size - passage - 2; j >= 0 + passage; j--) // третья строка
         {
             arraySpiral[i, j] = valueElements + 1;
             valueElements++;
         }
-        for (int i = size - current - 2, j = 0 + current; i > 0 + current; i--) // четвертый столбец
+        for (int i = size - passage - 2, j = 0 + passage; i > 0 + passage; i--) // четвертый столбец
         {
             arraySpiral[i, j] = valueElements + 1;
             valueElements++;
         }
-        current++;
     }
     if (size % 2 != 0) arraySpiral[size / 2, size / 2] = size * size;
     return arraySpiral;
 }
 
-void PrintArraySpiral(int[,] array)
+void PrintArraySpiral(int[,] array, int fillZeros = 2)
 {
     Console.WriteLine("Квадратный массив, заполненный спирально: ");
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j] >= 0 && array[i, j] < 10)
-                Console.Write($"0{array[i, j]} ");
-            else if(array[i,j] >= 10)
-                Console.Write(array[i, j] + " ");
-        }
+            Console.Write(array[i, j].ToString($"D{fillZeros}") + " ");
         Console.WriteLine();
     }
 }
