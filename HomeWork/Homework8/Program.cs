@@ -255,22 +255,22 @@ int[,] FiilArraySpiral()
     int valueElements = 0;
     for (int passage = 0; passage < size / 2; passage++)
     {
-        for (int i = 0 + passage, j = 0 + passage; j < size - passage; j++) // первая строка
+        for (int i = passage, j = passage; j < size - passage; j++) // первая строка
         {
             arraySpiral[i, j] = valueElements + 1;
             valueElements++;
         }
-        for (int i = 1 + passage, j = size - passage - 1; i < size - passage; i++) // первый столбец
+        for (int i = passage + 1, j = size - passage - 1; i < size - passage; i++) // первый столбец
         {
             arraySpiral[i, j] = valueElements + 1;
             valueElements++;
         }
-        for (int i = size - passage - 1, j = size - passage - 2; j >= 0 + passage; j--) // третья строка
+        for (int i = size - passage - 1, j = size - passage - 2; j >= passage; j--) // третья строка
         {
             arraySpiral[i, j] = valueElements + 1;
             valueElements++;
         }
-        for (int i = size - passage - 2, j = 0 + passage; i > 0 + passage; i--) // четвертый столбец
+        for (int i = size - passage - 2, j = passage; i > passage; i--) // четвертый столбец
         {
             arraySpiral[i, j] = valueElements + 1;
             valueElements++;
