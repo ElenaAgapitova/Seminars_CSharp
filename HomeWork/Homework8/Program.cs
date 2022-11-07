@@ -184,7 +184,7 @@ void PrintArray(int[] array)
     {
         Console.Write(array[i] + " ");
     }
-    Console.WriteLine("}.");
+    Console.WriteLine("}");
 }
 
 int[,,] Create3DArray(int[] array)
