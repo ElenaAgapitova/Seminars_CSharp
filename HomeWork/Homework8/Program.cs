@@ -151,20 +151,13 @@ if(resultArray != null) Print2Array(resultArray);*/
 // Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, 
 // которая будет построчно выводить массив, добавляя индексы каждого элемента.
 
-//int[,,] array3D = new int[3, 3, 2] {{{56,78}, {64,23}, {32,14}},
-//                              {{13,28}, {45,90}, {25,87}},
-//                              {{63,51}, {11,98}, {83,72}}};
-
-int[,,] checkArray = new int[2,2,2] {{{66,25}, {34,41}}, 
-                                        {{27,90}, {26,55}}};
-
 int[] TwoDigitPositiveNumsArray()
 {
-    int[] array = Enumerable.Range(10,90).ToArray();
-    for(int i = 0; i < array.Length; i++)
+    int[] array = Enumerable.Range(10, 90).ToArray();
+    for (int i = 0; i < array.Length; i++)
     {
-        int j = new Random().Next(0,90);
-        if(j!=i)
+        int j = new Random().Next(0, 90);
+        if (j != i)
         {
             var temp = array[j];
             array[j] = array[i];
@@ -174,30 +167,8 @@ int[] TwoDigitPositiveNumsArray()
     return array;
 }
 
-void PrintArray(int[] array)
+int[,,] Create3DArray(int[] array, int height, int width, int depth)
 {
-    Console.Write("Созданный массив: { ");
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine("}");
-}
-
-int[,,] Create3DArray(int[] array)
-{
-    Console.Write("Введите высоту (количество строк): ");
-    int height = Convert.ToInt32(Console.ReadLine());
-
-    Console.Write("Введите ширину(количество столбцов): ");
-    int width = Convert.ToInt32(Console.ReadLine());
-
-    Console.Write("Введите глубину массива: ");
-    int depth = Convert.ToInt32(Console.ReadLine());
-
-    Console.Write("Неккоретный ввод. Конвертация невозможна");
-    Console.ReadLine();
-
     int m = 0;
     int[,,] array3D = new int[height, width, depth];
     for (int i = 0; i < height; i++)
@@ -206,7 +177,7 @@ int[,,] Create3DArray(int[] array)
         {
             for (int k = 0; k < depth; k++)
             {
-                array3D[i,j,k] = array[m];
+                array3D[i, j, k] = array[m];
                 m++;
             }
         }
@@ -216,7 +187,7 @@ int[,,] Create3DArray(int[] array)
 
 void Print3DArray(int[,,] array)
 {
-    Console.WriteLine("Индексы элементов в трехмерном массиве (i,j,k): ");
+    Console.WriteLine("\nИндексы элементов в трехмерном массиве (i,j,k): ");
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
@@ -230,21 +201,35 @@ void Print3DArray(int[,,] array)
         }
     }
 }
-/*
-int[] array = TwoDigitPositiveNumsArray();
-PrintArray(array);
-Console.WriteLine();
-int[,,] array3D = Create3DArray(array);
-Print3DArray(array3D);
-*/
 
+try
+{
+    Console.Write("Введите высоту (количество строк): ");
+    int height = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите ширину(количество столбцов): ");
+    int width = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите глубину массива: ");
+    int depth = Convert.ToInt32(Console.ReadLine());
+
+    int[] array = TwoDigitPositiveNumsArray();
+
+    if (height * width * depth <= array.Length)
+    {
+        int[,,] array3D = Create3DArray(array, height, width, depth);
+        Print3DArray(array3D);
+    }
+    else
+        Console.WriteLine("\nВведены недопустимые значения. Уменьшите размер массива.");
+}
+catch(Exception)
+{
+    Console.WriteLine("\nНедопустимый ввод. Введите числа больше 0.");
+}
 
 //  Напишите программу, которая заполнит спирально массив 4 на 4.
 
-int[,] FiilArraySpiral()
+int[,] FillSquareArraySpiral(int size)
 {
-    Console.Write("Введите количество строк (количество строк = количество столбцов): ");
-    int size = Convert.ToInt32(Console.ReadLine());
     int[,] arraySpiral = new int[size, size];
     int valueElements = 0;
     for (int passage = 0; passage < size / 2; passage++)
@@ -276,7 +261,7 @@ int[,] FiilArraySpiral()
 
 void PrintArraySpiral(int[,] array, int fillZeros = 2)
 {
-    Console.WriteLine("Квадратный массив, заполненный спирально: ");
+    Console.WriteLine("\nКвадратный массив, заполненный спирально: ");
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
@@ -285,7 +270,17 @@ void PrintArraySpiral(int[,] array, int fillZeros = 2)
     }
 }
 /*
-int[,] result = FiilArraySpiral();
-PrintArraySpiral(result);
+try
+{
+    Console.Write("Введите количество строк (количество строк = количество столбцов): ");
+    int size = Convert.ToInt32(Console.ReadLine());
+
+    int[,] arraySpiral = FillSquareArraySpiral(size);
+    PrintArraySpiral(arraySpiral);
+}
+catch(Exception)
+{
+    Console.WriteLine("\nНедопустимый ввод. Введите число больше 0.");
+}
 */
 Console.ReadLine();
