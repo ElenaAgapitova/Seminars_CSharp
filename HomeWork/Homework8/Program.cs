@@ -1,7 +1,7 @@
 ﻿// Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой 
 // строки двумерного массива.
 Console.Clear();
-
+/*
 int[,] Create2Array()
 {
     Console.Write("Введите количество строк: ");
@@ -112,7 +112,7 @@ int IndexMinElements(int[] array)
 // Console.WriteLine($"Номер строки с наименьшей суммой элементов - {numberRows}.");
 */
 // Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
-
+/*
 int[,] MatrixMultiplication(int[,] array1, int[,] array2)
 {
     var newArray = new int[array1.GetLength(0), array2.GetLength(1)];
@@ -138,7 +138,7 @@ int[,] MatrixMultiplication(int[,] array1, int[,] array2)
         return newArray;
     }
 }
-/*
+
 int[,] array1 = Create2Array();
 Print2Array(array1);
 int[,] array2 = Create2Array();
@@ -146,41 +146,24 @@ Print2Array(array2);
 int[,] resultArray = MatrixMultiplication(array1,array2);
 Console.ForegroundColor = ConsoleColor.Green;
 if(resultArray != null) Print2Array(resultArray);
-*/
+
 
 // Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, 
 // которая будет построчно выводить массив, добавляя индексы каждого элемента.
 
-int[,,] array3D = new int[3, 3, 2] {{{56,78}, {64,23}, {32,14}},
-                                {{13,28}, {45,90}, {25,87}},
-                                {{63,51}, {11,98}, {83,72}}};
+//int[,,] array3D = new int[3, 3, 2] {{{56,78}, {64,23}, {32,14}},
+  //                              {{13,28}, {45,90}, {25,87}},
+  //                              {{63,51}, {11,98}, {83,72}}};
 
 int[,,] checkArray = new int[2,2,2] {{{66,25}, {34,41}}, 
                                         {{27,90}, {26,55}}};
 
+
+*/
+
 int[] TwoDigitPositiveNumsArray()
 {
-
-    int[] array = new int[90];
-    for (int i = 1; i < array.Length; i++)
-    {
-        array[0] = 10;
-        array[i] = array[i-1] + 1;
-    }
-        return array;
-}
-void PrintArray(int[] array)
-{
-    Console.Write("Созданный массив: { ");
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine("}.");
-}
-
-int[] ChangeOrderElements(int[] array)
-{
+    int[] array = Enumerable.Range(10,90).ToArray();
     for(int i = 0; i < array.Length; i++)
     {
         int j = new Random().Next(0,90);
@@ -192,6 +175,16 @@ int[] ChangeOrderElements(int[] array)
         }
     }
     return array;
+}
+
+void PrintArray(int[] array)
+{
+    Console.Write("Созданный массив: { ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine("}.");
 }
 
 int[,,] Create3DArray(int[] array)
@@ -234,17 +227,17 @@ void Print3DArray(int[,,] array)
         }
     }
 }
-/*
-int[] arrayElements = TwoDigitPositiveNumsArray();
-PrintArray(arrayElements);
-Console.WriteLine();
-int[] changeArray = ChangeOrderElements(arrayElements);
-PrintArray(changeArray);
-Console.WriteLine();
-int[,,] array3D = Create3DArray(changeArray);
-Print3DArray(array3D);
-*/
 
+// int[] arrayElements = TwoDigitPositiveNumsArray();
+// PrintArray(arrayElements);
+// Console.WriteLine();
+int[] array = TwoDigitPositiveNumsArray();
+PrintArray(array);
+Console.WriteLine();
+int[,,] array3D = Create3DArray(array);
+Print3DArray(array3D);
+
+/*
 //  Напишите программу, которая заполнит спирально массив 4 на 4.
 
 int[,] FiilArraySpiral()
@@ -293,5 +286,5 @@ void PrintArraySpiral(int[,] array, int fillZeros = 2)
 
 int[,] result = FiilArraySpiral();
 PrintArraySpiral(result);
-
+*/
 Console.ReadLine();
