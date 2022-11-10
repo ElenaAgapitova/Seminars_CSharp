@@ -37,7 +37,7 @@ int SumElements(int firstNum, int lastNum)
 //  Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два 
 // неотрицательных числа m и n.
 
-static int A(int m, int n)
+int A(int m, int n)
 {
     if (m == 0) return n + 1;
     if (m > 0 && n == 0) return A(m - 1, 1);
