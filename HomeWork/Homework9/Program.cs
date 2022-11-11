@@ -8,18 +8,18 @@ void PrintDigits(int n)
     if (n >1) PrintDigits(n - 1);
 }
 
-int n = 8;
-Console.Write($"N = {n} -> ");
-PrintDigits(n);
+// int n = 8;
+// Console.Write($"N = {n} -> ");
+// PrintDigits(n);
 
 // Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в 
 // промежутке от M до N.
 
 int SumElements(int firstNum, int lastNum)
 {
-    int sum = firstNum;
-    if (sum > lastNum) return 0;
-    return sum += SumElements(sum + 1, lastNum);
+    if (firstNum > lastNum) return firstNum + SumElements(firstNum-1, lastNum);
+    if (firstNum < lastNum) return firstNum + SumElements(firstNum + 1, lastNum);
+    else return firstNum;
 }
 
 // Console.Write("Введите число m: ");
@@ -31,7 +31,7 @@ int SumElements(int firstNum, int lastNum)
 // int result = SumElements(m,n);
 // Console.WriteLine("Сумма натуральных элементов в промежутке от m до n: " + result);
 
-//  Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два 
+// Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два 
 // неотрицательных числа m и n.
 
 int A(int m, int n)
