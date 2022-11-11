@@ -4,16 +4,13 @@ Console.Clear();
 
 void PrintDigits(int n)
 {
-    if (n >= 1)
-    {
-        Console.Write(n + " ");
-        PrintDigits(n - 1);
-    }
+    Console.Write(n + " ");
+    if (n >1) PrintDigits(n - 1);
 }
 
-// int n = 8;
-// Console.Write($"N = {n} -> ");
-// PrintDigits(n);
+int n = 8;
+Console.Write($"N = {n} -> ");
+PrintDigits(n);
 
 // Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в 
 // промежутке от M до N.
@@ -45,12 +42,12 @@ int A(int m, int n)
     return A(m,n); 
 }                  
 
-Console.Write("Введите число m больше 0: ");
-int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число m больше 0: ");
+// int m = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите число n больше 0: ");
-int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число n больше 0: ");
+// int n = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($"m = {m}, n = {n} -> A(m,n) = {A(m,n)}");      
+// Console.WriteLine($"m = {m}, n = {n} -> A(m,n) = {A(m,n)}");      
 
 Console.ReadKey();
