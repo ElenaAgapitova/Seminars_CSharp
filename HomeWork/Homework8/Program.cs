@@ -1,7 +1,7 @@
 ﻿// Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой 
 // строки двумерного массива.
 Console.Clear();
-
+/*
 int[,] Create2Array()
 {
     Console.Write("Введите количество строк: ");
@@ -150,7 +150,7 @@ if(resultArray != null) Print2Array(resultArray);*/
 
 // Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, 
 // которая будет построчно выводить массив, добавляя индексы каждого элемента.
-
+/*
 int[] TwoDigitPositiveNumsArray()
 {
     int[] array = Enumerable.Range(10, 90).ToArray();
@@ -221,7 +221,7 @@ catch(Exception)
     Console.WriteLine("\nНедопустимый ввод!");
     Console.WriteLine("Введите числа больше 0 и (или) уменьшите размер массива.");
 }
-*/
+
 //  Напишите программу, которая заполнит спирально массив 4 на 4.
 
 int[,] FillSquareArraySpiral(int rows, int columns)
@@ -284,5 +284,4 @@ catch(Exception)
 }
 
 Console.ReadLine();
-
-
+*/

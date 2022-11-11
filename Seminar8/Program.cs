@@ -1,7 +1,7 @@
 ﻿// Семинар 8
 // Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. 
 //В случае, если это невозможно, программа должна вывести сообщение для пользователя.
-
+/*
 int[,] Create2DArrayRandomInt(int rows, int columns, int minValue, int maxValue)
 {
     int[,] array = new int[rows, columns];
@@ -113,3 +113,4 @@ int[,] ArrayWithoutRowColumn(int[,] array)
 
 int[,] newArray = ArrayWithoutRowColumn(myArray);
 Print2DArrayInt(newArray);
+*/
